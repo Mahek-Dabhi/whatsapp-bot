@@ -1,0 +1,45 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# WhatsApp Automation Bot — Python Dependencies
+# Install with: pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Web framework ─────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9        # Required for file uploads (UploadFile)
+
+# ── Database ──────────────────────────────────────────────────────────────────
+pymongo==4.7.2
+bson==0.5.10                    # BSON ObjectId helpers
+
+# ── Task scheduling ───────────────────────────────────────────────────────────
+APScheduler==3.10.4
+apscheduler[mongodb]            # MongoDB job store for APScheduler
+
+# ── HTTP client ───────────────────────────────────────────────────────────────
+requests==2.32.3
+
+# ── AI ────────────────────────────────────────────────────────────────────────
+openai==1.30.1
+
+# ── Data processing ───────────────────────────────────────────────────────────
+pandas==2.2.2
+openpyxl==3.1.2                 # Excel file support for pandas
+
+# ── Environment management ────────────────────────────────────────────────────
+python-dotenv==1.0.1
+
+# ── Data validation (used by FastAPI) ─────────────────────────────────────────
+pydantic==2.7.1
+
+# ── Google Sheets integration (optional) ─────────────────────────────────────
+gspread==6.1.0
+google-auth==2.29.0
+
+# ── Logging ───────────────────────────────────────────────────────────────────
+# (Uses Python built-in logging — no extra package needed)
+
+# ── Development / Testing (optional) ─────────────────────────────────────────
+pytest==8.2.0
+pytest-asyncio==0.23.7
+httpx==0.27.0                   # Async HTTP client for FastAPI TestClient
